@@ -9,7 +9,7 @@ html{
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Open Sans', Arial, sans-serif;
+    font-family: Lato;
     font-size: 1rem;
     display: grid;
 }
@@ -153,18 +153,29 @@ li a{
 }
 
 .statistics__purchases,
-.statistics__suscribers,
-.statistics__features,
-.statistics__customers,
-.statistics__comments{
+.statistics__comments,
+.statistics__features{
     width: 384px;
     height: 200px;
-    background-color: #1ad5b0;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-color: rgb(32, 201, 168)
 }
+
+.statistics__customers,
+.statistics__suscribers{
+    width: 384px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(27, 213, 176)
+}
+
+
 
 .statistics__purchases:hover,
 .statistics__suscribers:hover,
@@ -206,12 +217,110 @@ li a{
 .opinions__wrapped__top-left,
 .opinions__wrapped__bottom-left{
     grid-column: 1;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border: 1px solid rgb(227, 231, 234);
+    margin: 5px;
+    background-color: rgb(249, 250, 252)
 }
 
 .opinions__wrapped__top-right,
 .opinions__wrapped__bottom-right{
     grid-column: 2;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border: 1px solid rgb(227, 231, 234);
+    margin: 5px;
+    background-color: rgb(249, 250, 252)
 }
+
+.card-image{
+    border-radius: 400px;
+    margin: 40px;
+}
+
+.opinions__wrapped__top-left__image,
+.opinions__wrapped__top-right__image,
+.opinions__wrapped__bottom-right__image,
+.opinions__wrapped__bottom-left__image{
+    display: flex;
+    align-items: center;
+    justify-content: right;
+}
+
+.location{
+    margin-top: 70px;
+}
+
+.location__header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.location__header-telenor,
+.location__header-nice,
+.location__header-plate,
+.location__header-brilliant,
+.location__header-microsoft,
+.location__header-color{
+    margin-right: 40px;
+    margin-left: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.suscription{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 60px;
+}
+
+.suscription__wrapped{
+    grid-column: 2/5;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.suscription__wrapped__text__icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.suscription__wrapped__text__icons__fb,
+.suscription__wrapped__text__icons__tw,
+.suscription__wrapped__text__icons__blog,
+.suscription__wrapped__text__icons__go,
+.suscription__wrapped__text__icons__fli,
+.suscription__wrapped__text__icons__bask,
+.suscription__wrapped__text__icons__in,
+.suscription__wrapped__text__icons__pint,
+.suscription__wrapped__text__icons__sky,
+.suscription__wrapped__text__icons__vime,
+.suscription__wrapped__text__icons__t{
+    margin: 10px;
+}
+
+.suscription__wrapped__form__name,
+.suscription__wrapped__form__email,
+.suscription__wrapped__form__phone,
+.suscription__wrapped__form__textbox,
+.suscription__wrapped__form__button{
+    margin:10px;
+}
+
+.nameInput{
+    border: 1px solid rgb(222, 231, 230);
+    padding: 20px;
+}
+
+textarea {
+    resize: none;
+ }
+
+ .suscription__wrapped__form{
+     margin-left: 30px;
+ }
 
 
 
