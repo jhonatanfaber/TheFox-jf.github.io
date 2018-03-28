@@ -18,10 +18,6 @@ p{
     color: rgb(167, 159, 159);
 }
 
-a href{
-
-}
-
 ul{
     display: flex;
     justify-content: center;
@@ -321,6 +317,117 @@ textarea {
  .suscription__wrapped__form{
      margin-left: 30px;
  }
+
+ .images__top-wrapped{
+     display: flex;
+     flex-direction: row;
+ }
+
+ .images__top-wrapped__one,
+ .images__top-wrapped__two,
+ .images__top-wrapped__three,
+ .images__top-wrapped__four,
+ .images__top-wrapped__five,
+ .images__bottom{
+     position: relative;
+ }
+
+ .text-block {
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    left:0px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+
+.text-block:hover {
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    left:0px;
+    background-color: rgb(34, 37, 52);
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    opacity: 0.96;
+    text-align: center;
+}
+
+.text-block-bike {
+    position: absolute;
+    bottom: 3px;
+    right: 0px;
+    left:0px;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.purchase-button{
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.social-media{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    background-color: rgb(26, 28, 40);
+}
+
+.social-media__wrapped{
+    grid-column: 2/5;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+footer{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    background-color: rgb(34, 37, 52);
+}
+
+.footer__wrapped{
+    grid-column: 2/5;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.footer__wrapped__text{
+    grid-column: 1;
+}
+
+.footer__wrapped__icons{
+    grid-column: 2;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.footer__wrapped__icons__fb,
+.footer__wrapped__icons__tw,
+.footer__wrapped__icons__tum,
+.footer__wrapped__icons__vime,
+.footer__wrapped__icons__in,
+.footer__wrapped__icons__bask,
+.footer__wrapped__icons__ins,
+.footer__wrapped__icons__blog{
+    margin-left: 5px;
+    margin-right: 5px;
+    color: white;
+}
+
+
+
+
+
+
+
 
 
 
