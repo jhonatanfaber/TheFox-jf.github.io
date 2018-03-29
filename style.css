@@ -14,8 +14,54 @@ body{
     display: grid;
 }
 
+
+.header-button{
+    font-family: Lato;
+    font-size: 19.16px;
+    font-weight: 400;
+    line-height: 19px;
+    color: #2c3e50;
+    transform: scale(0.725,0.731);
+}
+
+.header__icons{
+    display: flex;
+    flex-direction: row;
+}
+
+.header__search,
+.header__basket{
+    color: #a1b1bc;
+    margin: 10px;
+}
+
+h2{
+
+    font-family: Lato;
+    color: #2c3e50;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 50px;
+
+}
+
+h3{
+    font-family: Lato;
+    color: #2c3e50;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 24px;
+    width: 253px;
+    height: 14px;
+
+}
 p{
-    color: rgb(167, 159, 159);
+    font-family: Lato;
+    color: #a1b1bc;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+
 }
 
 ul{
@@ -35,10 +81,6 @@ li{
 
 li a{
     text-decoration: none;
-}
-
-.background-image{
-
 }
 
 .details{
@@ -65,12 +107,14 @@ li a{
 
 .view-detail-button{
     text-decoration: none;
-    background-color: rgb(175, 164, 164);
     color:white;
-    padding: 10px;
-    border-radius: 3px;
+    padding: 15px;
     font-size: 1.1rem;
     display: inline-block;
+    border-radius: 2px;
+    background-color: #a1b1bc;
+    box-shadow: 1px 3px 0px 0px #81919b;
+
 }
 
 .works__pictures{
@@ -101,12 +145,57 @@ li a{
 .works__pictures__right__top__header,
 .works__pictures__right__bottom__header
 {
-    border: 1px solid grey;
+    border: 1px solid rgb(231, 234, 239);
     display: flex;
     flex-direction: row;
     display: grid;
     grid-template-columns: repeat(2,1fr);
+    padding: 8px;
 }
+
+.works__pictures__left__top,
+.works__pictures__left__bottom,
+.works__pictures__middle__top,
+.works__pictures__middle__bottom,
+.works__pictures__right__top,
+.works__pictures__right__bottom{
+    position: relative;
+}
+
+.works__pictures__left__top:hover .overlay,
+.works__pictures__left__bottom:hover .overlay,
+.works__pictures__middle__top:hover .overlay,
+.works__pictures__middle__bottom:hover .overlay,
+.works__pictures__right__top:hover .overlay,
+.works__pictures__right__bottom:hover .overlay
+{
+    opacity: 1;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #dfeaf1;
+}
+
+.overlay__text {
+    color: black;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
 
 .works__pictures__left__top__header__title,
 .works__pictures__left__bottom__header__title,
@@ -116,6 +205,12 @@ li a{
 .works__pictures__right__bottom__header__title
 {
     padding: 5px;
+    font-family: Lato;
+    color: #2c3e50;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 24px;
+
 }
 
 .works__pictures__left__top__header__heart,
@@ -127,6 +222,12 @@ li a{
 {
     text-align: right;
     padding: 5px;
+    font-family: Lato;
+    color: #a1b1bc;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+
 }
 
 .information{
@@ -148,16 +249,29 @@ li a{
     grid-template-columns: repeat(5,1fr);
 }
 
-.statistics__purchases,
-.statistics__comments,
-.statistics__features{
-    width: 384px;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: rgb(32, 201, 168)
+.statistics__purchases__number,
+.statistics__suscribers__number,
+.statistics__features__number,
+.statistics__customers__number,
+.statistics__comments__number{
+    font-family: Lato;
+    color: #ffffff;
+    line-height: 24px;
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.statistics__purchases__tag,
+.statistics__suscribers__tag,
+.statistics__features__tag,
+.statistics__customers__tag,
+.statistics__comments__tag{
+    font-family: Lato;
+    color: #ffffff;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: 900;
+    margin-top: 10px;
 }
 
 .statistics__customers,
@@ -171,6 +285,17 @@ li a{
     background-color: rgb(27, 213, 176)
 }
 
+.statistics__purchases,
+.statistics__comments,
+.statistics__features{
+    width: 384px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(32, 201, 168)
+}
 
 
 .statistics__purchases:hover,
@@ -186,7 +311,22 @@ li a{
     display: grid;
     grid-template-columns: repeat(5,1fr);
 }
+.opinions__name{
+    font-family: Lato;
+    line-height: 24px;
+    color: #2c3e50;
+    font-size: 18px;
+    font-weight: 700;
+    margin-top: 20px;
+}
 
+.opinions__job{
+    font-family: Lato;
+    line-height: 24px;
+    color: #a1b1bc;
+    font-size: 14px;
+    font-weight: 400;
+}
 .opinions__wrapped{
     grid-column: 2/5;
     display: grid;
@@ -201,13 +341,37 @@ li a{
     align-items: center;
 }
 
-.pagination-button{
+.opinions__wrapped__title__buttons{
+    margin-bottom: 20px;
+}
+
+.pagination-button-prev{
     text-decoration: none;
-    background-color:white;
-    padding: 10px;
-    border-radius: 3px;
+    border: 1px solid grey;
+    border-right: 0px;
+    display: inline-block;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    background-color: #fbfafa;
+    color: #2c3e50;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.pagination-button-next{
+    text-decoration: none;
     border: 1px solid grey;
     display: inline-block;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: hsl(0, 11%, 98%);
+    color: #2c3e50;
+    padding-left: 20px;
+    padding-right: 39px;
+    padding-top: 7px;
+    padding-bottom: 7px;
 }
 
 .opinions__wrapped__top-left,
@@ -216,7 +380,7 @@ li a{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     border: 1px solid rgb(227, 231, 234);
-    margin: 5px;
+    margin: 15px;
     background-color: rgb(249, 250, 252)
 }
 
@@ -226,12 +390,14 @@ li a{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     border: 1px solid rgb(227, 231, 234);
-    margin: 5px;
+    margin: 15px;
     background-color: rgb(249, 250, 252)
 }
 
 .card-image{
-    border-radius: 400px;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
     margin: 40px;
 }
 
@@ -240,8 +406,7 @@ li a{
 .opinions__wrapped__bottom-right__image,
 .opinions__wrapped__bottom-left__image{
     display: flex;
-    align-items: center;
-    justify-content: right;
+    justify-content: left;
 }
 
 .location{
@@ -270,6 +435,26 @@ li a{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     margin-top: 60px;
+    margin-bottom: 100px;
+}
+
+.suscription__wrapped__text__title{
+    font-family: Lato;
+    color: #2c3e50;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 48px;
+    margin-bottom: 20px;
+
+}
+
+.suscription__wrapped__text__info__street{
+    font-family: Lato;
+    color: #a1b1bc;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 24px;
+
 }
 
 .suscription__wrapped{
@@ -303,15 +488,38 @@ li a{
 .suscription__wrapped__form__textbox,
 .suscription__wrapped__form__button{
     margin:10px;
+    border-radius: 3px;
 }
 
-.nameInput{
+.inputField{
     border: 1px solid rgb(222, 231, 230);
-    padding: 20px;
+    width: 570px;
+    height: 50px;
+    border-radius: 3px;
+    background-color: #ffffff;
+
+}
+
+.view-detail-button-large{
+    width: 570px;
+    height: 56px;
+    text-decoration: none;
+    color:white;
+    padding: 15px;
+    font-size: 1.1rem;
+    display: inline-block;
+    border-radius: 3px;
+    background-color: #a1b1bc;
+    box-shadow: 1px 3px 0px 0px #81919b;
+    text-align: center;
+    font-size: 16px;
+    font-family: Lato;
+    font-weight: 900;
 }
 
 textarea {
     resize: none;
+    border: 1px solid rgb(222, 231, 230);
  }
 
  .suscription__wrapped__form{
@@ -341,6 +549,27 @@ textarea {
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.text-block__title{
+    font-family: Lato;
+color: #ffffff;
+line-height: 24px;
+text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+font-size: 18px;
+font-weight: 700;
+}
+
+.text-block__date{
+    font-family: Lato;
+    color: #ffffff;
+    line-height: 24px;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    font-size: 14px;
+    font-weight: 400;
+
 }
 
 .text-block:hover {
