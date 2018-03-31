@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="responsive.css">
     <link rel="stylesheet" href="style.css">
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <title>Main Page</title>
@@ -14,7 +15,7 @@
 <body>
     <header>
         <ul>
-            <img src="images/logo.png" alt="green wolf logo">
+            <img class="logo" src="images/logo.jpg" alt="green wolf logo">
             <li>
                 <a href="#" class="header-button">HOME</a>
             </li>
@@ -57,7 +58,33 @@
         </ul>
     </header>
     <section class="background-image">
-        <img src="images/bg123.jpg">
+        <div class="text-block-image">
+            <div class="text-block__ti">
+                <div class="text-block__title__text">
+                    WE ARE ALWAYS WORKING HARD TO
+                </div>
+                <div class="text-block__tittle__text-continue">
+                    BUILD AWESOME WORK
+                </div>
+                <img class="line" src="images/line.jpg">
+            </div>
+            <div class="text-block__body">
+                <div class="text-block__body__one">
+                    Fully Responsive
+                </div>
+                <div class="text-block__body__two">
+                    Retina Ready
+                </div>
+                <div class="text-block__body__three">
+                    Extremely Customizable
+                </div>
+                <div class="text-block__body__four">
+                    WP 3.9+ Ready
+                </div>
+                <a href="#" class="buy-button">BUY IT NOW</a>
+            </div>
+        </div>
+        <img class="back-image" src="images/bg123.jpg">
     </section>
     <section class="details">
         <div class="details-group">
@@ -77,7 +104,73 @@
                 <a href="#" class="view-detail-button">VIEW DETAIL</a>
             </div>
             <div class="details-group__right">
-                JS dropdown
+                <div class="details-group__right__wrapped">
+                    <div class="dropdown">
+                        <a onclick="dropdown(WebDesign)">
+                            <div class="wrapper">
+                                <h3 class="space">Web Design Service</h3>
+                                <div class="space">
+                                    <i class="fas fa-angle-down fa-2x"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown__para">
+                            <p id="WebDesign">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia sapiente doloremque similique
+                                porro itaque, culpa quidem at dolor minus repellat sit optio repellendus consequuntur quibusdam
+                                molestias? Ut nihil sed dignissimos?</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a onclick='dropdown(CreativeService)'>
+                            <div class="wrapper">
+                                <h3 class="space">Creative Service</h3>
+                                <div class="space">
+                                    <i class="fas fa-angle-down fa-2x"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class=" wrapper__image">
+                            <div class="dropdown__para">
+                                <img src="./images/lemon.jpg" alt="lemon">
+                                <p id="CreativeService">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia sapiente doloremque similique porro itaque, culpa quidem
+                                    at dolor minus repellat sit optio repellendus consequuntur quibusdam molestias? Ut nihil
+                                    sed dignissimos?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a onclick="dropdown(SEO)">
+                            <div class="wrapper">
+                                <h3 class="space">SEO Solutions Service</h3>
+                                <div class="space">
+                                    <i class="fas fa-angle-down fa-2x"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown__para">
+                            <p id="SEO">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia sapiente doloremque similique
+                                porro itaque, culpa quidem at dolor minus repellat sit optio repellendus consequuntur quibusdam
+                                molestias? Ut nihil sed dignissimos?</p>
+                        </div>
+                    </div>
+                    <div class="dropdown">
+                        <a onclick="dropdown(GraphicDesign)">
+                            <div class="wrapper">
+                                <h3 class="space">Graphic Design Service</h3>
+                                <div class="space">
+                                    <i class="fas fa-angle-down fa-2x"></i>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="dropdown__para">
+                            <p id="GraphicDesign">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia sapiente doloremque similique
+                                porro itaque, culpa quidem at dolor minus repellat sit optio repellendus consequuntur quibusdam
+                                molestias? Ut nihil sed dignissimos?</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -123,7 +216,6 @@
                         <img src="images/bottomleft.jpg" alt="Mountain View">
                     </div>
                 </div>
-
             </div>
             <div class="works__pictures__middle">
                 <div class="works__pictures__middle__top">
@@ -209,22 +301,25 @@
         </div>
     </section>
     <section class="information">
-        <div class="information__text">
-            <h2>Why Work With Us</h2>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada nulla sit amet sem sagittis, posuere aliquet ipsum
-                vehicula. Suspendisse nec mollis turpis.
-            </p>
-            <p>
-                Aenean tristique a mi ac porta. Morbi adipiscing suscipit risus vel ullamcorper. Pellentesque et est ante. Vestibulum convallis,
-                justo at tristique faucibus, nunc nunc euismod magna, in ultricies felis libero vitae erat. Sed quis porta
-                felis, a convallis nulla. Curabitur auctor ligula id nunc dignissim, a porta libero cursus
-            </p>
-            <a href="#" class="view-detail-button">VIEW DETAIL</a>
+        <div class="information__wrapped">
+            <div class="information__wrapped__text">
+                <h2>Why Work With Us</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean malesuada nulla sit amet sem sagittis, posuere aliquet ipsum
+                    vehicula. Suspendisse nec mollis turpis.
+                </p>
+                <p>
+                    Aenean tristique a mi ac porta. Morbi adipiscing suscipit risus vel ullamcorper. Pellentesque et est ante. Vestibulum convallis,
+                    justo at tristique faucibus, nunc nunc euismod magna, in ultricies felis libero vitae erat. Sed quis
+                    porta felis, a convallis nulla. Curabitur auctor ligula id nunc dignissim, a porta libero cursus
+                </p>
+                <a href="#" class="view-detail-button">VIEW DETAIL</a>
+            </div>
+            <div class="information__wrapped__photo">
+                <img src="images/Layer_20.png" alt="Mountain View">
+            </div>
         </div>
-        <div class="information__photo">
-            <img src="images/Layer_20.png" alt="Mountain View">
-        </div>
+
     </section>
     <section class="statistics">
         <div class="statistics__purchases">
@@ -278,8 +373,7 @@
                     <h2> What Other Say About The Fox</h2>
                 </div>
                 <div class="opinions__wrapped__title__buttons">
-                    <a href="#" class="pagination-button-prev">&#8826 Previous</a>
-                    <a href="#" class="pagination-button-next">Next &#8827</a>
+                    <a href="#" class="pagination-button-prev">&#8826 Previous</a><a href="#" class="pagination-button-next">Next &#8827</a>
                 </div>
             </div>
             <div class="opinions__wrapped__top-left">
@@ -377,8 +471,7 @@
                 <img class="cardimage" src="images/ColorMedia.png">
             </div>
         </div>
-        <div class="location__map">
-            MAPAAA
+        <div id="map">
         </div>
     </section>
     <section class="suscription">
@@ -458,7 +551,7 @@
                     <input class="inputField" size="50" type="text" name="phone" placeholder="  Phone Number">
                 </div>
                 <div class="suscription__wrapped__form__textbox">
-                    <textarea rows="4" cols="50"></textarea>
+                    <textarea rows="4" cols="73"></textarea>
                 </div>
                 <div class="suscription__wrapped__form__button">
                     <a href="#" class="view-detail-button-large">SUBMIT NOW</a>
@@ -472,9 +565,7 @@
             <div class="images__top-wrapped__one">
                 <img class "long-images" src="images/f1.jpg" alt="Mountain View">
                 <div class="text-block">
-                    <div class="text-block__title">
-                        Standar Blog Title Here
-                    </div>
+                    Standar Blog Title Here
                     <div class="text-block__date">
                         27 July 2014 | Category
                     </div>
@@ -483,9 +574,7 @@
             <div class="images__top-wrapped__two">
                 <img class "long-images" src="images/f2.jpg" alt="Mountain View">
                 <div class="text-block">
-                    <div class="text-block__title">
-                        Standar Blog Title Here
-                    </div>
+                    Standar Blog Title Here
                     <div class="text-block__date">
                         27 July 2014 | Category
                     </div>
@@ -528,45 +617,137 @@
         <div class="images__bottom">
             <img class="bikeFull" src="images/bike.jpg" alt="Mountain View">
             <div class="text-block-bike">
-                <p>Get Stronger For Your Work</p>
-                <p>The fox is one of the top themeforest's selling psd theme all of the time</p>
+                <div class="text-block-bike__text">
+                    <div class="text-block-bike__text__title">
+                        Get Stronger For Your Work
+                    </div>
+                    <div class="text-block-bike__text__body">
+                        The fox is one of the top themeforest's selling psd theme all of the time
+                    </div>
+                </div>
                 <a href="#" class=purchase-button>PURCHASE NOW</a>
             </div>
-        </div>
-        <div class="purchase">
-
-        </div>
-        <div class="horizontal-images">
-
         </div>
     </section>
     <section class="social-media">
         <div class="social-media__wrapped">
             <div class="social-media__wrapped__description">
-                <p>The Fox TODO</p>
+                <img class="tfox-image" src="images/tfox.jpg">
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A excepturi cumque minus necessitatibus dolorem
-                    possimus quod fugit nesciunt eaque tenetur blanditiis in alias ut quo, quas eveniet fuga vitae! Doloremque.
+                    possimus quod fugit nesciunt eaque tenetur blanditiis in alias ut quo.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. A excepturi cumque minus necessitatibus dolorem possimus.
                 </p>
             </div>
             <div class="social-media__wrapped__posts">
-                <p> Recent Posts TODO</p>
-                <p> Blog Slideshow Post</p>
-                <p> standar Post</p>
-                <p> Video Post with Quote post</p>
-                <p> The post only type</p>
-                <p> Awesome post title here</p>
+                <p> Recent Posts</p>
+                <div class="social-media__wrapped__posts__date">
+                    <div class="social-media__wrapped__posts__date__text">
+                        Blog Slideshow Post
+                    </div>
+                    <div class="social-media__wrapped__posts__date__num">
+                        03 Jul
+                    </div>
+                </div>
+                <hr>
+                <div class="social-media__wrapped__posts__date">
+                    <div class="social-media__wrapped__posts__date__text">
+                        standar Post
+                    </div>
+                    <div class="social-media__wrapped__posts__date__num">
+                        27 May
+                    </div>
+                </div>
+                <hr>
+                <div class="social-media__wrapped__posts__date">
+                    <div class="social-media__wrapped__posts__date__text">
+                        Video Post with Quote post
+                    </div>
+                    <div class="social-media__wrapped__posts__date__num">
+                        23 May
+                    </div>
+                </div>
+                <hr>
+                <div class="social-media__wrapped__posts__date">
+                    <div class="social-media__wrapped__posts__date__text">
+                        The post only type
+                    </div>
+                    <div class="social-media__wrapped__posts__date__num">
+                        10 Jan
+                    </div>
+                </div>
+                <hr>
+                <div class="social-media__wrapped__posts__date">
+                    <div class="social-media__wrapped__posts__date__text">
+                        Awesome post title here
+                    </div>
+                    <div class="social-media__wrapped__posts__date__num">
+                        23 Jul
+                    </div>
+                </div>
             </div>
             <div class="social-media__wrapped__tweets">
-                <p>Recent Tweets TODO</p>
-                <p>Just updated my new site. @qwerty @mnbert</p>
-                <p>35min ago</p>
+                <p>Recent Tweets</p>
+                <div class="social-media__wrapped__tweets__group">
+                    <div class="social-media__wrapped__tweets__group__icon">
+                        <i class="fab fa-twitter-square fa-2x"></i>
+                    </div>
+                    <div class="social-media__wrapped__tweets__block">
+                        <div class="social-media__wrapped__tweets__tweet">
+                            Just updated my new site for you.
+                            <br> @qwerty @mnbert
+                        </div>
+                        <div class="social-media__wrapped__tweets__min">
+                            35min ago
+                        </div>
+                    </div>
+                </div>
+                <hr>
 
-                <p>Just updated my new site. @qwerty @mnbert</p>
-                <p>35min ago</p>
-
+                <div class="social-media__wrapped__tweets__group">
+                    <div class="social-media__wrapped__tweets__group__icon">
+                        <i class="fab fa-twitter-square fa-2x"></i>
+                    </div>
+                    <div class="social-media__wrapped__tweets__block">
+                        <div class="social-media__wrapped__tweets__tweet">
+                            Just updated my new site for you.
+                            <br>@qwerty @mnbert
+                        </div>
+                        <div class="social-media__wrapped__tweets__min">
+                            35min ago
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="social-media__wrapped__works">
                 <p>Featured Works</p>
+                <div class="social-media__wrapped__works__wrapped">
+                    <div class="social-media__wrapped__works__wrapped__left">
+                        <div class="social-media__wrapped__works__wrapped__top-left">
+                            <img class="s-media" src="images/topleft.jpg">
+                        </div>
+                        <div class="social-media__wrapped__works__wrapped__bottom-left">
+                            <img class="s-media" src="images/bottomleft.jpg">
+                        </div>
+                    </div>
+                    <div class="social-media__wrapped__works__wrapped__midd">
+                        <div class="social-media__wrapped__works__wrapped__top-midd">
+                            <img class="s-media" src="images/topmidd.jpg">
+                        </div>
+                        <div class="social-media__wrapped__works__wrapped__bottom-mid">
+                            <img class="s-media" src="images/bottmid.jpg">
+                        </div>
+                    </div>
+                    <div class="social-media__wrapped__works__wrapped__right">
+                        <div class="social-media__wrapped__works__wrapped__top-right">
+                            <img class="s-media" src="images/topright.jpg">
+                        </div>
+                        <div class="social-media__wrapped__works__wrapped__bottom-right">
+                            <img class="s-media" src="images/bottomright.jpg">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -601,15 +782,16 @@
                 <div class="footer__wrapped__icons__blog">
                     <i class="fas fa-rss"></i>
                 </div>
-
             </div>
-
         </div>
-
     </footer>
     <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
-        crossorigin="anonymous"></script>
-    <script> src = "main.js"</script>
+        crossorigin="anonymous">
+        </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBa-CdyFrlKFkkrjXpHW1hExkPQUm-BNmo&callback=initMap">
+    </script>
 </body>
 
 </html>

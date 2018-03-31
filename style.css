@@ -9,9 +9,13 @@ html{
 body{
     margin: 0;
     padding: 0;
-    font-family: Lato;
+    font-family: Lato,sans-serif;
     font-size: 1rem;
     display: grid;
+}
+
+.logo{
+    margin-right: 70px;
 }
 
 
@@ -22,6 +26,12 @@ body{
     line-height: 19px;
     color: #2c3e50;
     transform: scale(0.725,0.731);
+}
+
+.header-button:hover{
+    border-top: 5px solid rgb(27, 213, 176);
+    padding-top: 17px;
+    color: rgb(27, 213, 176);
 }
 
 .header__icons{
@@ -70,8 +80,7 @@ ul{
     align-items: center; 
 }
 
-li{
-    
+li{ 
     list-style-type: none;
     display: inline;
     padding-right: 15px;
@@ -83,9 +92,76 @@ li a{
     text-decoration: none;
 }
 
+.background-image{
+    position: relative;
+}
+
+.buy-button{
+    text-decoration: none;
+    color:white;
+    padding: 25px;
+    padding-left: 65px;
+    padding-right: 65px;
+    font-size: 1.4rem;
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #020202;
+}
+
+.text-block__ti{
+    position: absolute;
+    left: 20%;
+    top: 30%;
+}
+
+.line{
+    margin-top: 30px;
+}
+
+.text-block__title__text{
+    font-family: Lato;
+    color: black;
+    font-size: 36px;
+    font-weight: 200;
+    line-height: 14px;
+}
+
+.text-block__tittle__text-continue{
+    font-family: Lato;
+    color: black;
+    font-size: 46px;
+    font-weight: 900;
+    line-height: 14px;
+}
+
+.text-block__body__one,
+.text-block__body__two,
+.text-block__body__three,
+.text-block__body__four{
+    margin: 30px;
+}
+
+.text-block__title__text{
+    margin-bottom: 40px;
+}
+
+.text-block__body
+{
+    font-family: Lato;
+    color: black;
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 14px;
+    position: absolute;
+    left: 20%;
+    top: 40%;
+    margin-top: 30px;
+}
+
 .details{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    margin-top: 60px;
 }
 
 .details-group{
@@ -95,14 +171,51 @@ li a{
 }
 
 .details-group__left{
-    grid-column: 1/2;
+    grid-column: 1;
     margin: 10px;
     padding-right: 30px;
 }
 
 .details-group__right{
-    grid-column: 2/3;
+    grid-column: 2;
     margin: 10px;
+}
+
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+	border-top: 1px solid #eceef0;
+	border-right: 1px solid #eceef0;
+	border-left: 1px solid #eceef0;
+	border-radius: 3px;
+}
+
+.dropdown__para{
+    display: flex;
+    flex-direction: row;
+    padding: 10px;  
+}
+
+.space{
+    margin:20px;
+}
+
+#CreativeService{
+    margin-left: 20px;
+}
+
+.dropdown{
+   margin-bottom: 5px; 
+}
+
+.fa-angle-down{
+    color: #eceef0;
+}
+
+.dropdown__para{
+    border: 1px solid #eceef0;
 }
 
 .view-detail-button{
@@ -114,7 +227,6 @@ li a{
     border-radius: 2px;
     background-color: #a1b1bc;
     box-shadow: 1px 3px 0px 0px #81919b;
-
 }
 
 .works__pictures{
@@ -233,15 +345,18 @@ li a{
 .information{
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    margin-top: 60px;
+    margin-top: 90px;
+    margin-bottom: 40px;
 }
 
-.information__text{
-    grid-column: 2/4;
+.information__wrapped{
+    grid-column: 2/5;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
 }
 
-.information__photo{
-    grid-column: 4/5;
+.information__wrapped__photo{
+    margin-left: 20px;
 }
 
 .statistics{
@@ -377,8 +492,8 @@ li a{
 .opinions__wrapped__top-left,
 .opinions__wrapped__bottom-left{
     grid-column: 1;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    display: flex;
+    flex-direction: row;
     border: 1px solid rgb(227, 231, 234);
     margin: 15px;
     background-color: rgb(249, 250, 252)
@@ -387,8 +502,8 @@ li a{
 .opinions__wrapped__top-right,
 .opinions__wrapped__bottom-right{
     grid-column: 2;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    display: flex;
+    flex-direction: row;
     border: 1px solid rgb(227, 231, 234);
     margin: 15px;
     background-color: rgb(249, 250, 252)
@@ -407,6 +522,14 @@ li a{
 .opinions__wrapped__bottom-left__image{
     display: flex;
     justify-content: left;
+}
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+    margin-top: 30px;
+    margin-bottom: 40px;
 }
 
 .location{
@@ -545,21 +668,17 @@ textarea {
     bottom: 3px;
     right: 0px;
     left:0px;
-    color: white;
     padding-left: 20px;
     padding-right: 20px;
     text-align: center;
     padding-bottom: 20px;
     padding-top: 20px;
-}
-
-.text-block__title{
     font-family: Lato;
-color: #ffffff;
-line-height: 24px;
-text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
-font-size: 18px;
-font-weight: 700;
+    color: #ffffff;
+    line-height: 24px;
+    text-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    font-weight: 700;
 }
 
 .text-block__date{
@@ -572,47 +691,88 @@ font-weight: 700;
 
 }
 
-.text-block:hover {
-    position: absolute;
-    bottom: 3px;
-    right: 0px;
-    left:0px;
+.text-block:hover{
     background-color: rgb(34, 37, 52);
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
-    opacity: 0.96;
-    text-align: center;
+    color: rgb(25, 189, 155);
+    opacity: 0.95;
 }
 
-.text-block-bike {
-    position: absolute;
-    bottom: 3px;
-    right: 0px;
-    left:0px;
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;
+.bikeFull{
+    width: 100%;
+    height: 100%;
 }
 
 .purchase-button{
+    position: absolute;
+    bottom: 40%;
+    left:45%;
     color: white;
+    padding-left: 20px;
+    padding-right: 20px;  
+}
+
+.text-block-bike__text__title{
+    position: absolute;
+    top: 30%;
+    left:38%;
+}
+
+.text-block-bike__text__body{
+    position: absolute;
+    top: 35%;
+    left:37%;
+}
+
+.text-block-bike__text__title{
+    width: 470px;
+    height: 34px;
+    font-family: Lato;
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 14px;
+}
+
+.text-block-bike__text__body{
+    width: 497px;
+    height: 15px;
+    font-family: Lato;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 14px;
+    padding-top: 20px;
+}
+
+.purchase-button{
     text-decoration: none;
-    border: 1px solid white;
-    border-radius: 3px;
-    padding: 10px;
+    border: 3px solid white;
+    border-radius: 5px;
+    padding: 13px;
+    font-family: Lato;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 14px;
 }
 
 .social-media{
     display: grid;
     grid-template-columns: repeat(5,1fr);
     background-color: rgb(26, 28, 40);
+    padding-top: 60px;
+    padding-bottom: 70px;
 }
 
 .social-media__wrapped{
     grid-column: 2/5;
     display: grid;
     grid-template-columns: repeat(4,1fr);
+}
+
+.s-media{
+    height: 85px;
+    width: 85px;
 }
 
 footer{
@@ -636,6 +796,23 @@ footer{
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
+}
+
+.social-media__wrapped__posts{
+    margin-right: 20px; 
+}
+
+.social-media__wrapped__posts > p,
+.social-media__wrapped__tweets > p,
+.social-media__wrapped__works > p{
+    font-family: Lato;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 900;
+    line-height: 2px;
+    border-left: 5px solid rgb(25, 189, 155);
+    padding:8px;
 }
 
 .footer__wrapped__icons__fb,
@@ -650,6 +827,71 @@ footer{
     margin-right: 5px;
     color: white;
 }
+
+.social-media__wrapped__posts__date__text,
+.social-media__wrapped__posts__date__num{
+    font-family: Lato;
+    color: #a1b1bc;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.social-media__wrapped__posts__date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.social-media__wrapped__tweets__tweet{
+    font-family: Lato;
+    font-weight: 400;
+    line-height: 24px;
+    color: #a1b1bc;
+    font-size: 14px;
+}
+
+.social-media__wrapped__tweets__min{
+    font-family: Lato;
+    font-weight: 400;
+    line-height: 24px;
+    color: #6c7d89;
+    font-size: 12px;
+}
+
+.social-media__wrapped__tweets__group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.social-media__wrapped__tweets__group__icon{
+    color: white;
+}
+
+.social-media__wrapped__tweets{
+    margin-right: 30px;
+    margin-left: 5px;
+}
+
+.social-media__wrapped__works__wrapped{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.social-media__wrapped__works__wrapped__left{
+    grid-column: 1;
+}
+.social-media__wrapped__works__wrapped__midd{
+    grid-column: 2;
+}
+.social-media__wrapped__works__wrapped__right{
+    grid-column: 3;
+}
+
+
+
 
 
 
